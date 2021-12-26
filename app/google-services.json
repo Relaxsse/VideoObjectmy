@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "359297303422",
+    "firebase_url": "https://videomy-4b4f2-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "videomy-4b4f2",
+    "storage_bucket": "videomy-4b4f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359297303422:android:f194a3f55742521c3a292f",
+        "android_client_info": {
+          "package_name": "com.example.videoobject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359297303422-vtdtj7t4tcc25ohn4j6u7u196ff2uj2s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBKxhxXvYURy6nSij9mLxAWpkWw5uyja8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359297303422-vtdtj7t4tcc25ohn4j6u7u196ff2uj2s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
