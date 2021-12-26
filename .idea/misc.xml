@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AndroidStudioProject/VideoObject/app/src/main/res/layout/activity_main.xml" value="0.14" />
+        <entry key="..\:/AndroidStudioProject/VideoObject/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProject/VideoObject/app/src/main/res/layout/activity_main2.xml" value="0.148046875" />
+        <entry key="..\:/AndroidStudioProject/VideoObject/app/src/main/res/layout/item_message.xml" value="0.148046875" />
+        <entry key="..\:/AndroidStudioProject/VideoObject/app/src/main/res/layout/video_view.xml" value="0.2" />
       </map>
     </option>
   </component>
