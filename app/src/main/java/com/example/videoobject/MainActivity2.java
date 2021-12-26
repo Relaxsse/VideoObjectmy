@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -28,9 +29,11 @@ import java.util.List;
 public class MainActivity2 extends AppCompatActivity {
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference("message");
+    DatabaseReference myRef = database.getReference("kommentarii");
 
     private static int MAX_MESSAGE_LENGTH = 100;
+
+    private int position = 0;
 
     EditText meditText;
     Button mbutton;
@@ -46,10 +49,25 @@ public class MainActivity2 extends AppCompatActivity {
         String vidAddress = "https://archive.org/download/sinema-trailer_caligula/Caligula%20%281979%29%20ORIGINAL%20TRAILER%20%28480p_30fps_H264-128kbit_AAC%29.mp4";
         Uri vidUri = Uri.parse(vidAddress);
         videoView.setVideoURI(vidUri);
-        MediaController vidControl = new MediaController(this);
+        MediaController vidControl = new MediaController(MainActivity2.this);
         vidControl.setAnchorView(videoView);
         videoView.setMediaController(vidControl);
         videoView.start();
+        videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                videoView.seekTo(position);
+                if (position == 0) {
+                    videoView.start();
+                }
+                mp.setOnVideoSizeChangedListener(new MediaPlayer.OnVideoSizeChangedListener() {
+                    @Override
+                    public void onVideoSizeChanged(MediaPlayer mp, int width, int height) {
+                        vidControl.setAnchorView(videoView);
+                    }
+                });
+            }
+        });
 
         meditText = findViewById(R.id.editText);
         mbutton = findViewById(R.id.button);
