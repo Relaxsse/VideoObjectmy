@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+<string-array name="Названия_видео">
+    <item>Первое видео</item>
+    <item>Второе видео</item>
+    <item>Третье видео</item>
+    <item>Четвертое видео</item>
+</string-array>
 </resources>
